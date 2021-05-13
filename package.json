@@ -1,0 +1,26 @@
+{
+  "name": "evaluate-logfile",
+  "version": "1.0.0",
+  "description": "Reads a log file of device readings and determines each device's quality based on pre-determined rules",
+  "main": "evaluateLogFile.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kanglicheng/evaluateLogFile.git"
+  },
+  "keywords": [
+    "logs",
+    "parsing"
+  ],
+  "author": "kanglicheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kanglicheng/evaluateLogFile/issues"
+  },
+  "homepage": "https://github.com/kanglicheng/evaluateLogFile#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.23"
+  }
+}
