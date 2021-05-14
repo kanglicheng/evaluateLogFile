@@ -9,12 +9,26 @@ const sampleOutput = {
     'hum-2': 'discard',
     'mon-1': "keep",
     'mon-2': 'discard'
-    }
+}
+
+
+const ultraPreciseThermometerReading = "reference -10.0 45.0 6\nthermometer temp-1\n2007-04-05T22:00 -10.1\n2007-04-05T22:00 -9,9"
+
 
 describe('evaluateLogFile tests', ()=>{
     it("handles basic inputs", ()=>{
         const result = evaluateLogFile(sampleInput);
         expect(result).toEqual(sampleOutput);
+    })
+
+    it("handles zero-length input", ()=>{
+        const result = evaluateLogFile("");
+        expect(result).toEqual({})
+    })
+
+    it("handles negative temperatures", ()=>{
+        const result = evaluateLogFile(ultraPreciseThermometerReading);
+        expect(result).toEqual({'temp-1':'ultra precise'})
     })
     
 })
