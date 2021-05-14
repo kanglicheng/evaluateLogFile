@@ -4,7 +4,7 @@
   "description": "Reads a log file of device readings and determines each device's quality based on pre-determined rules",
   "main": "evaluateLogFile.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,15 @@
   },
   "homepage": "https://github.com/kanglicheng/evaluateLogFile#readme",
   "devDependencies": {
-    "@types/jest": "^26.0.23"
+    "@babel/core": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "@types/jest": "^26.0.23",
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3"
+  },
+  "type": "module",
+  "dependencies": {
+    "@babel/preset-typescript": "^7.13.0",
+    "jest-cli": "^26.6.3"
   }
 }
